@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'add.js') }}"></script>
+
+<script>
+    let data_rights = {{data|tojson}} 
+    let rights = data_rights["rights"]
+    let data = data_rights["data"]
+    console.log(data)
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h5>Enter Title: </h5>  
+            <div><input class="name" type="text" id="normal_s"></div>
+            <div class="Warning_name"></div>
+            <h5>Image URL: </h5>  
+            <div><input class="image_url" id="normal_s"></div>
+            <div class="Warning_image"></div>
+            <div></div>
+            <h5>Year Drafted: </h5>   
+            <div><input class="year" id="normal_s"></div>
+            <div class="Warning_year"></div>
+            <h5>Summary: </h5>       
+            <div><textarea class="summary" id="normal_t"  rows="5" cols="33"></textarea></div>
+            <div class="Warning_summary"></div>
+            <h5>Interpretation: </h5>  
+            <div><textarea class="sc_interpretation" id="normal_t" rows="5" cols="33"></textarea></div>
+            <div class="Warning_interpretation"></div>
+        </div>
+        <div class="col-md-4">
+            <div><h5>Relevant Articles</h5></div>
+            <div><input class="article"></div>
+            <div class="Warning_article"></div>
+            <div><h5>Authors</h5></div>
+            <div class="Warning_authors"></div>
+            <ul style="list-style-type:square">
+                <li>
+                    <span><input class="author1"></span>
+                </li>
+                <li>
+                    <span><input class="author2"></span>
+                </li>
+                <li>
+                    <span><input class="author3"></span>
+                </li>
+            </ul>
+            
+            <div><h5>Who Can Use?</h5></div>
+            <div class="Warning_utility"></div>
+            <ul style="list-style-type:square">
+                <li>
+                <span><input class="utility1"></span>
+                </li>
+                <li>
+                    <span><input class="utility2"></span>
+                </li>
+                <li>
+                    <span><input class="utility3"></span>
+                </li>
+            </ul>
+            <div><h5>Land-Mark Judgements</h5></div>
+            <div class="Warning_judgements"></div>
+            <ul style="list-style-type:square">
+                <li>
+                <span><input class="judgements1"></span>
+                </li>
+                <li>
+                    <span><input class="judgements2"></span>
+                </li>
+                <li>
+                    <span><input class="judgements3"></span>
+                </li>
+            </ul>
+            <div><h5>Genres</h5></div>
+            <div class="Warning_genres"></div>
+            <ul style="list-style-type:square">
+                <li>
+                <span><input class="genres1"></span>
+                </li>
+                <li>
+                    <span><input class="genres2"></span>
+                </li>
+                <li>
+                    <span><input class="genres3"></span>
+                </li>
+                <li>
+                    <span><input class="genres4"></span>
+                    </li>
+                    <li>
+                        <span><input class="genres5"></span>
+                    </li>
+                    <li>
+                        <span><input class="genres6"></span>
+                    </li>
+                    <li>
+                        <span><input class="genres7"></span>
+                        </li>
+                        <li>
+                            <span><input class="genres8"></span>
+                        </li>
+                        <li>
+                            <span><input class="genres9"></span>
+                        </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+

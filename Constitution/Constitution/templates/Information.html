@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'Information.js') }}"></script>
+
+<script>
+    let data_rights = {{data|tojson}} 
+    let rights = data_rights["rights"]
+    let data = data_rights["data"]
+    let ID = data_rights["ID"]
+    console.log(data)
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="name"></div>
+            <div class="image"></div>
+            <div></div>
+            <div class="year"></div>        
+            <div class="summary"></div>
+            <div class="sc_interpretation"></div>
+        </div>
+        <div class="col-md-4">
+            <div class="article"></div>
+            <div><h5>Authors</h5></div>
+            <ul style="list-style-type:square">
+                <span class="author"></span>
+            </ul>
+            
+            <div><h5>Who Can Use?</h5></div>
+            <ul style="list-style-type:square">
+                <span class="utility"></span>
+            </ul>
+            <div><h5>Land-Mark Judgements</h5></div>
+            <ul style="list-style-type:square">
+                <span class="judgements"></span>
+            </ul>
+            <div><h5>Genres</h5></div>
+            <ul style="list-style-type:square">
+                <span class="genres"></span>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+

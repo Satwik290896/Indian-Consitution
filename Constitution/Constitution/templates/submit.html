@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'submit.js') }}"></script>
+
+<script>
+    let data_rights = {{data|tojson}} 
+    console.log(data_rights)
+    let rights = data_rights["rights"]
+    let Genres = data_rights["Genres"]
+    let Utilities = data_rights["Utilities"]
+    let Authors = data_rights["Authors"]
+    let data = data_rights["data"]
+    let Rights_ID = data_rights["Rights_ID"]
+    let Genres_ID = data_rights["Genres_ID"]
+    let Utilities_ID = data_rights["Utilities_ID"]
+    let Authors_ID = data_rights["Authors_ID"]
+    let submitted = data_rights["submitted"]
+
+    let genres_data_ID = data_rights["genres_data_ID"]
+    let utilities_data_ID = data_rights["utilities_data_ID"]
+    let authors_data_ID = data_rights["authors_data_ID"]
+    console.log("Hello")
+    console.log("This is " + data_rights.Rights_ID)
+</script>
+
+<div class="container">
+    <div class="name1"></div>
+    <span class="NOR"></span>
+    <ul style="list-style-type:square">
+        <span class="list1"></span>
+    </ul>
+    <br>
+    <div class="name2"></div>
+    <ul style="list-style-type:square">
+        <span class="list2"></span>
+    </ul>
+    <br>
+    <div class="name3"></div>
+    <ul style="list-style-type:square">
+        <span class="list3"></span>
+    </ul>
+
+    <div class="name4"></div>
+    <ul style="list-style-type:square">
+        <span class="list4"></span>
+    </ul>
+
+    
+</div>
+
+{% endblock %}
+
+
+
